@@ -4,6 +4,9 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{hyperref}
+\hypersetup{bookmarksdepth=section}
+\tolerance=2000
+\emergencystretch=2em
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{geometry}
@@ -447,12 +450,13 @@ at least $1/50$. Hence $\GF(I_8)\ge 1/50$.
 \end{lemma}
 
 \begin{proof}
-\textit{Step~1 (bounding $a_3$).} Runner~3 uses $B_{3,2}=[32/(11a_3),34/(11a_3)]$ to cover
-$[g_L,109/110]$. The right endpoint condition $34/(11a_3)\ge 109/110$ gives $a_3\le 340/109$,
-and the left endpoint condition $32/(11a_3)\le g_L$ gives $a_3\ge 32/(11g_L)$.
+\textit{Step~1 (bounding $a_3$).} Runner~3 uses $B_{3,2}=[32/(11a_3),34/(11a_3)]$
+to cover $[g_L,109/110]$. The right endpoint condition $34/(11a_3)\ge 109/110$
+gives $a_3\le 340/109$, and the left endpoint $32/(11a_3)\le g_L$
+gives $a_3\ge 32/(11g_L)$.
 
 \textit{Step~2 (forcing $a_8$ from the $I_3$ gap).} Since $a_3>3$, runner~3 uses
-$B_{3,0}=[10/(11a_3),12/(11a_3)]$ for its primary slot $I_3=[34/110,43/110]$. But
+$B_{3,0}=[10/(11a_3),12/(11a_3)]$ for slot $I_3=[34/110,43/110]$. But
 \[
   \frac{12}{11a_3} < \frac{12}{33} = \frac{40}{110} < \frac{43}{110},
 \]
@@ -509,13 +513,13 @@ the left edge via $B_{7,1}=[21/(11a_7),23/(11a_7)]$, which forces
 \[
   \frac{21}{11a_7} \le \frac{12}{11a_4} \implies a_7 \ge \frac{7a_4}{4} > 7.
 \]
-For runner~7 to cover the right edge $87/110$ of $I_7=[78/110,87/110]$ via
-$B_{7,4}=[54/(11a_7),56/(11a_7)]$, one needs
+For runner~7 to cover the right edge $87/110$ of $I_7$
+via $B_{7,4}=[54/(11a_7),56/(11a_7)]$, one needs
 \[
   \frac{56}{11a_7} \ge \frac{87}{110} \implies a_7 \le \frac{560}{87}.
 \]
-But $560/87<7$, so the two constraints $a_7\ge 7a_4/4>7$ and $a_7\le 560/87<7$ are
-incompatible. Hence $\GF(I_7)>0$.
+But $560/87<7$, so the constraints $a_7\ge 7a_4/4>7$
+and $a_7\le 560/87<7$ are incompatible. Hence $\GF(I_7)>0$.
 \end{proof}
 
 \subsection{Universal Blocking}
@@ -562,15 +566,15 @@ simultaneously:
 \]
 The right-edge condition gives $a_j\le 10(11k+12)/109$; the left-edge condition (using
 $g_L\ge 100/110$) gives $a_j\ge(11k+10)/10$. These are incompatible whenever
-\[
+\begin{align*}
   \frac{11k+10}{10} > \frac{10(11k+12)}{109}
-  \iff 109(11k+10)>100(11k+12)
-  \iff 9\cdot 11k > 110
-  \iff k > \frac{110}{99},
-\]
-i.e.\ for all $k\ge 2$. For runners $j\ge 5$ in the sign-range box $a_j\in(j-1,j+1)$,
-every bad interval that could reach $109/110$ must use $k\ge 4$. Since $k\ge 4>110/99$,
-all such branches are infeasible. Full speed-range checks are in Appendix~A.10.
+  &\iff 109(11k+10)>100(11k+12) \\
+  &\iff 9\cdot 11k > 110 \\
+  &\iff k > \frac{110}{99},
+\end{align*}
+i.e.\ for all $k\ge 2$. For runners $j\ge 5$ in the sign-range box
+$a_j\in(j-1,j+1)$, every bad interval reaching $109/110$ must use $k\ge 4$.
+Since $k\ge 4>110/99$, all such branches are infeasible. Full speed-range checks are in Appendix~A.10.
 
 If no runner is feasible, the gap survives directly in $I_9$. Otherwise one of PSM,
 Chain~A, or Chain~B opens another slot. In all cases $\GF(I_k)>0$ for some slot $I_k$.
