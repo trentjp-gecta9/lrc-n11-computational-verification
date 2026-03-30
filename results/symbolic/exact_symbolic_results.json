@@ -1,0 +1,178 @@
+{
+  "n_total": 34,
+  "n_passed": 34,
+  "n_failed": 0,
+  "checks": [
+    {
+      "label": "  2\u207b\u00b9 \u2261 6 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 6"
+    },
+    {
+      "label": "  3\u207b\u00b9 \u2261 4 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 4"
+    },
+    {
+      "label": "  4\u207b\u00b9 \u2261 3 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 3"
+    },
+    {
+      "label": "  5\u207b\u00b9 \u2261 9 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 9"
+    },
+    {
+      "label": "  6\u207b\u00b9 \u2261 2 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 2"
+    },
+    {
+      "label": "  7\u207b\u00b9 \u2261 8 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 8"
+    },
+    {
+      "label": "  8\u207b\u00b9 \u2261 7 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 7"
+    },
+    {
+      "label": "  9\u207b\u00b9 \u2261 5 (mod 11)",
+      "status": "PASS",
+      "detail": "computed 5"
+    },
+    {
+      "label": "I_9 left  = 10/11",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "label": "I_9 right = 109/110",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "label": "I_9 width = 9/110",
+      "status": "PASS",
+      "detail": "width = 9/110 = 0.081818"
+    },
+    {
+      "label": "I_8 left  = 89/110",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "label": "I_8 right = 98/110",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "label": "B_{6,4}[left] at a_6=225/38  = 228/275",
+      "status": "PASS",
+      "detail": "computed 228/275 = 0.82909091"
+    },
+    {
+      "label": "B_{6,4}[left] > I_8[left]  (gap forced in I_8)",
+      "status": "PASS",
+      "detail": "228/275 > 89/110  \u2192  gap = 1/50"
+    },
+    {
+      "label": "Chain A gap width = 1/50",
+      "status": "PASS",
+      "detail": "computed 1/50 = 0.02000000"
+    },
+    {
+      "label": "a_7 min needed = 1575/218",
+      "status": "PASS",
+      "detail": "computed 1575/218 = 7.224771"
+    },
+    {
+      "label": "a_7 min > a_7 max  (incompatibility confirmed)",
+      "status": "PASS",
+      "detail": "diff = 14945/18966 = 0.787989"
+    },
+    {
+      "label": "B_{9,8}[left]  = 441/473",
+      "status": "PASS",
+      "detail": "computed 441/473"
+    },
+    {
+      "label": "B_{9,8}[right] = 450/473",
+      "status": "PASS",
+      "detail": "computed 450/473"
+    },
+    {
+      "label": "B_{9,8} \u2286 I_9  (left)",
+      "status": "PASS",
+      "detail": "441/473 >= 10/11"
+    },
+    {
+      "label": "B_{9,8} \u2286 I_9  (right)",
+      "status": "PASS",
+      "detail": "450/473 <= 109/110"
+    },
+    {
+      "label": "Right gap in I_9 > 0",
+      "status": "PASS",
+      "detail": "width = 17/430 = 0.03953488"
+    },
+    {
+      "label": "Sub-gap (1216/1265 - 450/473) = 538/54395",
+      "status": "PASS",
+      "detail": "computed 538/54395 = 0.0098906149"
+    },
+    {
+      "label": "Sub-gap > 0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "label": "\u03b1\u2081 boundary: 20/9 = 23\u00b7(580/69)/87  (tight)",
+      "status": "PASS",
+      "detail": "LHS=20/9, RHS=20/9"
+    },
+    {
+      "label": "\u03b1\u2081 boundary a_9 = 580/69 \u2208 (8, 9)  (\u03c3\u2089=-1 sign range)",
+      "status": "PASS",
+      "detail": "8.405797"
+    },
+    {
+      "label": "\u03b1\u2083 boundary a_9 = 1960/207 \u2208 (9, 10)",
+      "status": "PASS",
+      "detail": "9.468599"
+    },
+    {
+      "label": "\u03b2\u2081 \u222a \u03b2\u2082 upper bound 980/109 < 9  (within \u03c3\u2089=-1 range)",
+      "status": "PASS",
+      "detail": "980/109 = 8.990826"
+    },
+    {
+      "label": "\u03b2\u2083 \u222a \u03b2\u2084 lower bound 1960/207 > 9  (within \u03c3\u2089=+1 range)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "label": "W_ref length with a_1=1/10 = 90/11 > 1",
+      "status": "PASS",
+      "detail": "= 8.1818"
+    },
+    {
+      "label": "W_ref length with a_1=3/11 = 3 > 1",
+      "status": "PASS",
+      "detail": "= 3.0000"
+    },
+    {
+      "label": "W_ref length with a_1=8/11 = 9/8 > 1",
+      "status": "PASS",
+      "detail": "= 1.1250"
+    },
+    {
+      "label": "W_ref length with a_1=9/11 = 1  (boundary, excluded)",
+      "status": "PASS",
+      "detail": "confirms strict regime requires a_1 < 9/11"
+    }
+  ],
+  "failures": []
+}

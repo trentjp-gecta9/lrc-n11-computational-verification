@@ -1,0 +1,69 @@
+{
+  "run_id": "run_1e8_mech",
+  "version": "v2",
+  "completed_at": "2026-03-30T10:48:49.617192+00:00",
+  "interrupted": false,
+  "n_tested": 100000000,
+  "n_passed": 100000000,
+  "n_failed": 0,
+  "n_batches_completed": 20000,
+  "total_boundaries_evaluated": 61359721983,
+  "global_min_margin": -1.3877787807814457e-17,
+  "global_max_margin": 0.09088166663511102,
+  "sigma2_neg": 49997347,
+  "sigma2_pos": 50002653,
+  "region_stats": [
+    {
+      "region": "alpha_1",
+      "n_configs": 10140377,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09080355223821332
+    },
+    {
+      "region": "alpha_1e",
+      "n_configs": 228865,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.08989779774457887
+    },
+    {
+      "region": "alpha_3",
+      "n_configs": 11726316,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09080843872515179
+    },
+    {
+      "region": "beta_1",
+      "n_configs": 7352684,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09077091820330296
+    },
+    {
+      "region": "beta_2",
+      "n_configs": 7271331,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09082637004855171
+    },
+    {
+      "region": "beta_3",
+      "n_configs": 2173514,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09068655730391947
+    },
+    {
+      "region": "beta_4",
+      "n_configs": 11109566,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09077511884396544
+    },
+    {
+      "region": "neg_branch",
+      "n_configs": 49997347,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09088166663511102
+    }
+  ],
+  "total_time_s": 3931.963963291957,
+  "configs_per_second": 25432.583038293422,
+  "success_rate": 1.0,
+  "p_failure_upper_95": 3e-08
+}

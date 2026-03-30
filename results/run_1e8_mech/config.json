@@ -1,0 +1,17 @@
+{
+  "run_id": "run_1e8_mech",
+  "version": "v2",
+  "target": 100000000,
+  "batch_size": 5000,
+  "n_batches": 20000,
+  "n_workers": 10,
+  "seed": 42,
+  "theta": 0.09090909090909091,
+  "n_runners": 11,
+  "method": "boundary_set_event_complete_v2",
+  "near_miss_k": 500,
+  "started_at": "2026-03-30T09:43:17.646522+00:00",
+  "python": "3.14.3 (v3.14.3:323c59a5e34, Feb  3 2026, 11:41:37) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "numpy": "2.3.3",
+  "output_dir": "/Users/trentpalelei/lrc_runs"
+}

@@ -1,0 +1,69 @@
+{
+  "run_id": "run_1e9_mech",
+  "version": "v2",
+  "completed_at": "2026-03-30T21:33:47.930519+00:00",
+  "interrupted": false,
+  "n_tested": 1000000000,
+  "n_passed": 1000000000,
+  "n_failed": 0,
+  "n_batches_completed": 200000,
+  "total_boundaries_evaluated": 613652841085,
+  "global_min_margin": -1.3877787807814457e-17,
+  "global_max_margin": 0.09090081289351287,
+  "sigma2_neg": 500010482,
+  "sigma2_pos": 499989518,
+  "region_stats": [
+    {
+      "region": "alpha_1",
+      "n_configs": 101428629,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09089854710142728
+    },
+    {
+      "region": "alpha_1e",
+      "n_configs": 2294005,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09046250769081829
+    },
+    {
+      "region": "alpha_3",
+      "n_configs": 117152148,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09089523573859903
+    },
+    {
+      "region": "beta_1",
+      "n_configs": 73544198,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09080707803689181
+    },
+    {
+      "region": "beta_2",
+      "n_configs": 72719968,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09088969793381793
+    },
+    {
+      "region": "beta_3",
+      "n_configs": 21736583,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09081312782335368
+    },
+    {
+      "region": "beta_4",
+      "n_configs": 111113987,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09086473787071506
+    },
+    {
+      "region": "neg_branch",
+      "n_configs": 500010482,
+      "min_margin": -1.3877787807814457e-17,
+      "max_margin": 0.09090081289351287
+    }
+  ],
+  "total_time_s": 38679.82932487503,
+  "configs_per_second": 25853.268162093445,
+  "success_rate": 1.0,
+  "p_failure_upper_95": 3e-09
+}

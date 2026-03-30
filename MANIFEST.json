@@ -1,0 +1,149 @@
+{
+  "project": "LRC n=11 Computational Verification",
+  "proof_document": "lrc_n11_ap_paper_v28.2.md",
+  "author": "Trent Palelei",
+  "created": "2026-03-30",
+  "method": "boundary_set_event_complete",
+  "phi_n_paper_reference": "Palelei 2026, phi(n)-Residue Framework, boundary-set method \u00a73",
+  "verification_components": {
+    "exact_symbolic": {
+      "script": "scripts/exact_symbolic.py",
+      "description": "Exact rational arithmetic verification of all explicit inequality chains",
+      "arithmetic": "fractions.Fraction (zero floating-point error)",
+      "n_checks": 34,
+      "n_passed": 34,
+      "status": "COMPLETE",
+      "run_date": "2026-03-30",
+      "output": "runs/exact_symbolic_results.json"
+    },
+    "boundary_set_search": {
+      "script": "scripts/verify_lrc_n11.py",
+      "description": "Event-complete witness search via boundary-set method",
+      "method_guarantee": "Exhaustive within W_ref: isolation status constant between boundary times",
+      "n_runners": 11,
+      "theta": 0.09090909090909091,
+      "theta_fraction": "1/11",
+      "speed_regime": {
+        "a_1": "(0, 1)",
+        "a_j_for_j_2_to_9": "(j-1, j+1) random sign class",
+        "a_10": "10.0 (fixed, normalised)"
+      },
+      "sign_classes": 256,
+      "macos_note": "SQLite requires a local path (not iCloud/bindfs). Use --output-dir ~/lrc_runs and copy JSONL+JSON files to repo afterward."
+    },
+    "qwen_prescreen": {
+      "script": "scripts/prescreen_qwen.py",
+      "description": "Qwen LLM review of logical structure of Chain A, Chain B, Universal Blocking, alpha/beta decomposition",
+      "requires": "Ollama at localhost:11434, model qwen3.5:4b",
+      "n_prompts": 4,
+      "status": "PENDING \u2014 run on M4 with Ollama active"
+    }
+  },
+  "run_registry": [
+    {
+      "run_id": "run_sandbox_1e5",
+      "n_tested": 100000,
+      "n_failed": 0,
+      "n_boundaries_evaluated": 61342912,
+      "mean_boundaries_per_config": 613.4,
+      "throughput_configs_per_sec": 11053,
+      "global_min_margin": -1.39e-17,
+      "seed": 42,
+      "date": "2026-03-30",
+      "platform": "Linux sandbox 4-core",
+      "note": "Initial validation run",
+      "status": "COMPLETE",
+      "evidence": "runs/run_sandbox_1e5/batches.jsonl"
+    },
+    {
+      "run_id": "run_sandbox_5e5",
+      "n_tested": 500000,
+      "n_failed": 0,
+      "n_boundaries_evaluated": 305814739,
+      "mean_boundaries_per_config": 611.6,
+      "throughput_configs_per_sec": 15346,
+      "global_min_margin": -1.39e-17,
+      "seed": 1337,
+      "date": "2026-03-30",
+      "platform": "Linux sandbox 4-core",
+      "note": "Second seed \u2014 independent run",
+      "status": "COMPLETE",
+      "evidence": "runs/run_sandbox_5e5/batches.jsonl"
+    },
+    {
+      "run_id": "run_auto_99",
+      "n_tested": 5000000,
+      "n_failed": 0,
+      "n_boundaries_evaluated": 3055855783,
+      "mean_boundaries_per_config": 611.2,
+      "throughput_configs_per_sec": 14749,
+      "seed": 99,
+      "date": "2026-03-30",
+      "platform": "Claude session (Linux sandbox 4-core)",
+      "status": "COMPLETE",
+      "evidence": "runs/run_auto_99/batches.jsonl"
+    }
+  ],
+  "target_runs_on_m4": [
+    {
+      "run_id": "run_1e7",
+      "target": 10000000,
+      "scale": "10^7",
+      "status": "PENDING",
+      "expected_duration_m4": "~7 min (10 cores, ~25k configs/sec)"
+    },
+    {
+      "run_id": "run_1e8",
+      "target": 100000000,
+      "scale": "10^8",
+      "status": "PENDING",
+      "expected_duration_m4": "~70 min to ~4 hours depending on batch size",
+      "significance": "Compelling: 95% conf. failure rate < 3e-8"
+    },
+    {
+      "run_id": "run_1e9",
+      "target": 1000000000,
+      "scale": "10^9",
+      "status": "PENDING",
+      "expected_duration_m4": "~10-40 hours depending on optimisation",
+      "significance": "Overwhelming: 95% conf. failure rate < 3e-9"
+    }
+  ],
+  "repo_notes": {
+    "evidence_files": [
+      "runs/*/batches.jsonl",
+      "runs/*/summary.json",
+      "runs/*/config.json"
+    ],
+    "query_interface": "scripts/analyze_results.py",
+    "portability": "batches.jsonl is plain-text JSONL (one record per batch). All scripts require only Python 3.10+ and numpy. SQLite evidence.db is generated locally at run time and is not committed \u2014 it can be rebuilt from batches.jsonl if needed.",
+    "reproducibility": "Each batch is seeded deterministically: batch_seed = master_seed + batch_index. Any single batch can be re-run independently to verify a specific record.",
+    "sqlite_macos": "SQLite requires a local filesystem path on macOS. Run with --output-dir ~/lrc_runs (or any non-iCloud local path), then copy batches.jsonl, summary.json, config.json to this repo."
+  },
+  "statistical_thresholds": {
+    "suggestive": {
+      "n": 1000000,
+      "p_failure_bound": 3e-06
+    },
+    "moderate": {
+      "n": 10000000,
+      "p_failure_bound": 3e-07
+    },
+    "compelling": {
+      "n": 100000000,
+      "p_failure_bound": 3e-08
+    },
+    "overwhelming": {
+      "n": 1000000000,
+      "p_failure_bound": 3e-09
+    }
+  },
+  "cumulative_as_of_2026_03_30": {
+    "n_tested": 5600000,
+    "n_failed": 0,
+    "total_boundaries_evaluated": 3423013434,
+    "p_failure_upper_95": 5.357142857142857e-07,
+    "n_runs": 3,
+    "note": "3 independent seeds, 100% witness found."
+  }
+}
