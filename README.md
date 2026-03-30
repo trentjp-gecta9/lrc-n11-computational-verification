@@ -187,3 +187,4 @@ with no hidden exceptional regimes detected below 10⁹.
 
 Trent Palelei
 GitHub: [@trentjp-gecta9](https://github.com/trentjp-gecta9)
+ORCID: [0009-0002-8692-2833](https://orcid.org/0009-0002-8692-2833)
