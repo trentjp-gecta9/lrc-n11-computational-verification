@@ -101,17 +101,17 @@ git clone https://github.com/trentjp-gecta9/lrc-n11-computational-verification
 cd lrc-n11-computational-verification
 
 # Smoke test — 30 seconds
-python3 scripts/verify_lrc_n11_v2.py \
+python3 scripts/verify_lrc_n11.py \
   --target 5000 --batch-size 500 --workers 4 \
   --seed 99 --run-id smoke_repro
 
 # Reproduce 10^8 campaign (seed 42, ~65 min on M4 10-core)
-python3 scripts/qwen_lrc_monitor.py \
+python3 scripts/verification_monitor.py \
   --run-id run_1e8_repro --target 100000000 \
   --seed 42 --output-dir ~/lrc_runs_repro
 
 # Reproduce 10^9 campaign (seed 1337, ~11 hr on M4 10-core)
-python3 scripts/qwen_lrc_monitor.py \
+python3 scripts/verification_monitor.py \
   --run-id run_1e9_repro --target 1000000000 \
   --seed 1337 --output-dir ~/lrc_runs_repro
 
@@ -130,11 +130,11 @@ up from the last checkpoint automatically.
 ├── README.md                          this file
 ├── MANIFEST.json                      provenance registry + run metadata
 ├── scripts/
-│   ├── verify_lrc_n11_v2.py          main boundary-set verification harness
+│   ├── verify_lrc_n11.py          main boundary-set verification harness
 │   ├── exact_symbolic.py             exact rational inequality checks (34 claims)
 │   ├── analyze_results.py            query evidence DB, print summary tables
-│   ├── qwen_lrc_monitor.py           autonomous monitor + auto-restarter
-│   └── launch_next_run.py            auto-launches next run on completion
+│   ├── verification_monitor.py           autonomous monitor + auto-restarter
+│   └── launch_campaign.py            auto-launches next campaign on completion
 ├── results/
 │   ├── symbolic/
 │   │   └── exact_symbolic_results.json    34/34 symbolic checks
