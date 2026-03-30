@@ -1,9 +1,12 @@
 # Computational Verification — Lonely Runner Conjecture, n = 11
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19341800.svg)](https://doi.org/10.5281/zenodo.19341800)
+
 This repository contains the computational support for the paper:
 
-> **"The Lonely Runner Conjecture for n = 11"**
-> Trent Palelei, 2026
+> **"Eleven Lonely Runners: Complementary Pairs and the Coupling Principle"**
+> Trent Palelei, MI Research Foundation, 2026
+> DOI: [10.5281/zenodo.19341800](https://doi.org/10.5281/zenodo.19341800)
 
 The analytic proof is complete and self-contained. The computations here are
 **not part of the proof**. They provide large-scale, independent, mechanism-level
