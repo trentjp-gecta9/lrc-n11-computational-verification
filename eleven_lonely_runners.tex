@@ -1201,8 +1201,8 @@ minimal uncovered width is
 
 The computations described here are \emph{not} part of the proof; the theorem is
 established analytically in Sections~1--8.  They provide independent, large-scale
-validation that the proof's structural mechanisms behave exactly as claimed, with no
-hidden exceptional regimes detected.
+corroboration that the proof's structural mechanisms behave as the analysis predicts,
+with no exceptional regimes detected in either campaign.
 
 \subsection*{Exact symbolic verification}
 
@@ -1253,11 +1253,21 @@ Every region was covered in both campaigns and no exceptional behaviour was obse
 in any region.
 
 With zero failures across $1.1\times10^{9}$ event-complete trials, the 99.9\%
-confidence upper bound on the true failure rate is $6.9\times10^{-9}$.  For
-comparison, the probability of a hardware bit-flip error during the run exceeds this
-bound, making undetected software error the dominant residual uncertainty.
+confidence upper bound on the true failure rate is $6.9\times10^{-9}$.
 
-All scripts, raw results, and reproduction instructions are available at:\\
-\url{https://github.com/trentjp-gecta9/lrc-n11-computational-verification}
+\medskip
+\noindent\textbf{Reproducibility.}
+All materials are archived at\\
+\url{https://github.com/trentjp-gecta9/lrc-n11-computational-verification}\\
+and include the following artifacts.
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item \texttt{scripts/verify\_lrc\_n11.py} --- verification harness
+  \item \texttt{scripts/exact\_symbolic.py} --- exact rational inequality checker
+  \item \texttt{results/symbolic/exact\_symbolic\_results.json} --- 34/34 log
+  \item \texttt{results/run\_1e8\_mech/batches.jsonl} --- $10^8$ audit trail
+  \item \texttt{results/run\_1e9\_mech/batches.jsonl.gz} --- $10^9$ audit trail
+  \item \texttt{results/run\_*/summary.json} --- campaign summaries
+\end{itemize}
+Each campaign is fully reproducible from the \texttt{README} instructions.
 
 \end{document}
